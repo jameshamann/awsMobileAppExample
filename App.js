@@ -11,7 +11,10 @@ import {
   Text,
   View
 } from 'react-native';
+import Amplify from 'aws-amplify';
 import { withAuthenticator } from 'aws-amplify-react-native';
+import aws_exports from './aws-exports';
+Amplify.configure(aws_exports);
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
